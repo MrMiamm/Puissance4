@@ -1,0 +1,789 @@
+[ 
+    {
+        "test":1,
+        "test_label":"Test initialisation de la grille",
+        "file_name":"initGrille.c",
+        "goal":{
+            "type":"grille",
+            "val":"grille vide"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"none"
+            }
+        ]
+    },
+    {
+        "test":2,
+        "test_label":"Test initialisation de la grille",
+        "file_name":"initGrille.c",
+        "goal":{
+            "type":"grille",
+            "val":"grille vide"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille vide"
+            }
+        ]
+    },
+    {
+        "test":3,
+        "test_label":"Test initialisation de la grille",
+        "file_name":"initGrille.c",
+        "goal":{
+            "type":"grille",
+            "val":"grille vide"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            }
+        ]
+    },
+    {
+        "test":4,
+        "test_label":"Test initialisation de la grille",
+        "file_name":"initGrille.c",
+        "goal":{
+            "type":"grille",
+            "val":"grille vide"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            }
+        ]
+    },
+    {
+        "test":5,
+        "test_label":"Test affichage de la grille happy end",
+        "file_name":"afficher.c",
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"char",
+                "val":"X"
+            },
+            {
+                "type":"int",
+                "val":"3"
+            }
+        ]
+    },
+    {
+        "test":6,
+        "test_label":"Test affichage de la grille happy end",
+        "file_name":"afficher.c",
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille vide"
+            },
+            {
+                "type":"char",
+                "val":"X"
+            },
+            {
+                "type":"int",
+                "val":"5"
+            }
+        ]
+    },
+    {
+        "test":7,
+        "test_label":"Test affichage de la grille happy end",
+        "file_name":"afficher.c",
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            },
+            {
+                "type":"char",
+                "val":"O"
+            },
+            {
+                "type":"int",
+                "val":"4"
+            }
+        ]
+    },
+    {
+        "test":8,
+        "test_label":"Test affichage de la grille limite",
+        "file_name":"afficher.c",
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"char",
+                "val":"O"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            }
+        ]
+    },
+    {
+        "test":9,
+        "test_label":"Test affichage de la grille limite",
+        "file_name":"afficher.c",
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"char",
+                "val":"R"
+            },
+            {
+                "type":"int",
+                "val":"6"
+            }
+        ]
+    },
+    {
+        "test":10,
+        "test_label":"Test affichage de la grille (n'affiche pas la grille si la valeur de la colonne est erronee)",
+        "file_name":"afficher.c",
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"char",
+                "val":"$"
+            },
+            {
+                "type":"int",
+                "val":"56"
+            }
+        ]
+    },
+    {
+        "test":11,
+        "test_label":"Test affichage de la grille (n'affiche pas la grille si la valeur de la colonne est erronee)",
+        "file_name":"afficher.c",
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"char",
+                "val":"$"
+            },
+            {
+                "type":"int",
+                "val":"-94"
+            }
+        ]
+    },
+    {
+        "test":12,
+        "test_label":"Test affichage de la grille (n'affiche pas la grille si la valeur de la colonne est erronee)",
+        "file_name":"afficher.c",
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"char",
+                "val":"="
+            },
+            {
+                "type":"int",
+                "val":"7"
+            }
+        ]
+    },
+    {
+        "test":13,
+        "test_label":"Test si la grille est pleine (grille vide)",
+        "file_name":"grillePleine.c",
+        "goal":{
+            "type":"bool",
+            "val":"False"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille vide"
+            }
+        ]
+    },
+    {
+        "test":14,
+        "test_label":"Test si la grille est pleine (grille a moite remplie)",
+        "file_name":"grillePleine.c",
+        "goal":{
+            "type":"bool",
+            "val":"False"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            }
+        ]
+    },
+    {
+        "test":15,
+        "test_label":"Test si la grille est pleine (grille remplie)",
+        "file_name":"grillePleine.c",
+        "goal":{
+            "type":"bool",
+            "val":"True"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            }
+        ]
+    },
+    {
+        "test":16,
+        "test_label":"Test du placement d'un pion dans la grille (si le joueur choisis la 4eme colonne)",
+        "file_name":"jouer.c",
+        "goal":[
+            {
+            "type":"grille",
+            "val":"grille actualisee ayant pour valeur O a l'emplacement [2][3]"
+            },
+            {
+                "type":"int",
+                "val":"2"
+            },
+            {
+                "type":"int",
+                "val":"3"
+            }
+        ],
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide ayant l'emplacement [2][3] libre"
+            },
+            {
+                "type":"char",
+                "val":"O"
+            }
+        ]
+    },
+    {
+        "test":17,
+        "test_label":"Test du placement d'un pion dans la grille (si le joueur choisis la 7eme colonne)",
+        "file_name":"jouer.c",
+        "goal":[
+            {
+            "type":"grille",
+            "val":"grille actualisee ayant pour valeur X a l'emplacement [5][6]"
+            },
+            {
+                "type":"int",
+                "val":"5"
+            },
+            {
+                "type":"int",
+                "val":"6"
+            }
+        ],
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille vide"
+            },
+            {
+                "type":"char",
+                "val":"X"
+            }
+        ]
+    },
+    {
+        "test":18,
+        "test_label":"Test du placement d'un pion dans la grille (si le joueur choisis la 1ere colonne)",
+        "file_name":"jouer.c",
+        "goal":[
+            {
+            "type":"grille",
+            "val":"grille actualisee ayant pour valeur $ a l'emplacement [5][0]"
+            },
+            {
+                "type":"int",
+                "val":"5"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            }
+        ],
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide ayant l'emplacement [5][0] libre"
+            },
+            {
+                "type":"char",
+                "val":"$"
+            }
+        ]
+    },
+    {
+        "test":19,
+        "test_label":"Test du choix de la colonne (happy end, si le joueur choisi la 3eme colonne)",
+        "file_name":"choisirColonne.c",
+        "goal":{
+            "type":"int",
+            "val":"2"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"char",
+                "val":"X"
+            },
+            {
+                "type":"int",
+                "val":"3"
+            }
+        ]
+    },
+    {
+        "test":20,
+        "test_label":"Test du choix de la colonne (cas limite, si le joueur choisi la 7eme colonne)",
+        "file_name":"choisirColonne.c",
+        "goal":{
+            "type":"int",
+            "val":"6"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"char",
+                "val":"O"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            }
+        ]
+    },
+    {
+        "test":21,
+        "test_label":"Test du choix de la colonne (cas limite, si le joueur choisi la 1ere colonne)",
+        "file_name":"choisirColonne.c",
+        "goal":{
+            "type":"int",
+            "val":"0"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"char",
+                "val":"*"
+            },
+            {
+                "type":"int",
+                "val":"6"
+            }
+        ]
+    },
+    {
+        "test":22,
+        "test_label":"Test du choix de la colonne (valeur erronee, met l'indice de la colonne de depart a 0, le joueur a choisi la 5eme colonne)",
+        "file_name":"choisirColonne.c",
+        "goal":{
+            "type":"int",
+            "val":"4"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"char",
+                "val":"*"
+            },
+            {
+                "type":"int",
+                "val":"651"
+            }
+        ]
+    },
+    {
+        "test":23,
+        "test_label":"Test pour trouver l'indice de la ligne (happy end)",
+        "file_name":"trouverLigne.c",
+        "goal":{
+            "type":"int",
+            "val":"2"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide ayant l'emplacement [2][3] libre"
+            },
+            {
+                "type":"int",
+                "val":"3"
+            }
+        ]
+    },
+    {
+        "test":24,
+        "test_label":"Test pour trouver l'indice de la ligne (cas limite)",
+        "file_name":"trouverLigne.c",
+        "goal":{
+            "type":"int",
+            "val":"5"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide ayant l'emplacement [5][0] libre"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            }
+        ]
+    },
+    {
+        "test":25,
+        "test_label":"Test pour trouver l'indice de la ligne (cas limite)",
+        "file_name":"trouverLigne.c",
+        "goal":{
+            "type":"int",
+            "val":"0"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide ayant l'emplacement [0][6] libre"
+            },
+            {
+                "type":"int",
+                "val":"6"
+            }
+        ]
+    },
+    {
+        "test":26,
+        "test_label":"Test pour trouver l'indice de la ligne (colonne remplie)",
+        "file_name":"trouverLigne.c",
+        "goal":{
+            "type":"int",
+            "val":"-1"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            },
+            {
+                "type":"int",
+                "val":"5"
+            }
+        ]
+    },
+    {
+        "test":27,
+        "test_label":"Test si le joueur gagne (grille vide)",
+        "file_name":"estVainqueur.c",
+        "goal":{
+            "type":"bool",
+            "val":"False"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille vide"
+            },
+            {
+                "type":"int",
+                "val":"1"
+            },
+            {
+                "type":"int",
+                "val":"3"
+            }
+        ]
+    },
+    {
+        "test":28,
+        "test_label":"Test si le joueur gagne (2 jetons alignes incluant l'emplacement [0][6])",
+        "file_name":"estVainqueur.c",
+        "goal":{
+            "type":"bool",
+            "val":"False"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            },
+            {
+                "type":"int",
+                "val":"6"
+            }
+        ]
+    },
+    {
+        "test":29,
+        "test_label":"Test si le joueur gagne (aucun jeton aligne)",
+        "file_name":"estVainqueur.c",
+        "goal":{
+            "type":"bool",
+            "val":"False"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            }
+        ]
+    },
+    {
+        "test":30,
+        "test_label":"Test si le joueur gagne (2 jetons alignes incluant l'emplacement [5][0])",
+        "file_name":"estVainqueur.c",
+        "goal":{
+            "type":"bool",
+            "val":"False"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            },
+            {
+                "type":"int",
+                "val":"5"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            }
+        ]
+    },
+    {
+        "test":31,
+        "test_label":"Test si le joueur gagne (3 jetons alignes incluant l'emplacement [5][6])",
+        "file_name":"estVainqueur.c",
+        "goal":{
+            "type":"bool",
+            "val":"False"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            },
+            {
+                "type":"int",
+                "val":"5"
+            },
+            {
+                "type":"int",
+                "val":"6"
+            }
+        ]
+    },
+    {
+        "test":32,
+        "test_label":"Test si le joueur gagne (4 jetons alignes verticalement incluant l'emplacement [4][3])",
+        "file_name":"estVainqueur.c",
+        "goal":{
+            "type":"bool",
+            "val":"True"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille quelconque sauf remplie/vide"
+            },
+            {
+                "type":"int",
+                "val":"4"
+            },
+            {
+                "type":"int",
+                "val":"3"
+            }
+        ]
+    },
+    {
+        "test":33,
+        "test_label":"Test si le joueur gagne (4 jetons alignes horizontalement incluant l'emplacement [0][6])",
+        "file_name":"estVainqueur.c",
+        "goal":{
+            "type":"bool",
+            "val":"True"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            },
+            {
+                "type":"int",
+                "val":"6"
+            }
+        ]
+    },
+    {
+        "test":34,
+        "test_label":"Test si le joueur gagne (4 jetons alignes diagonalement incluant l'emplacement [0][0])",
+        "file_name":"estVainqueur.c",
+        "goal":{
+            "type":"bool",
+            "val":"True"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            }
+        ]
+    },
+    {
+        "test":35,
+        "test_label":"Test si le joueur gagne (4 jetons alignes diagonalement incluant l'emplacement [5][0])",
+        "file_name":"estVainqueur.c",
+        "goal":{
+            "type":"bool",
+            "val":"True"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            },
+            {
+                "type":"int",
+                "val":"5"
+            },
+            {
+                "type":"int",
+                "val":"0"
+            }
+        ]
+    },
+    {
+        "test":36,
+        "test_label":"Test si le joueur gagne (4 jetons alignes diagonalement incluant l'emplacement [5][6])",
+        "file_name":"estVainqueur.c",
+        "goal":{
+            "type":"bool",
+            "val":"True"
+        },
+        "args":[
+            {
+                "type":"grille",
+                "val":"grille remplie"
+            },
+            {
+                "type":"int",
+                "val":"5"
+            },
+            {
+                "type":"int",
+                "val":"6"
+            }
+        ]
+    },
+    {
+        "test":37,
+        "test_label":"Test affichage gagnant (pour les O)",
+        "file_name":"finDePartie.c",
+        "args":[
+            {
+                "type":"char",
+                "val":"O"
+            }
+        ]
+    },
+    {
+        "test":38,
+        "test_label":"Test affichage gagnant (pour les X)",
+        "file_name":"finDePartie.c",
+        "args":[
+            {
+                "type":"char",
+                "val":"X"
+            }
+        ]
+    },
+    {
+        "test":39,
+        "test_label":"Test affichage gagnant (pour les *)",
+        "file_name":"finDePartie.c",
+        "args":[
+            {
+                "type":"char",
+                "val":"*"
+            }
+        ]
+    },
+    {
+        "test":40,
+        "test_label":"Test affichage gagnant (aucun gagnant)",
+        "file_name":"finDePartie.c",
+        "args":[
+            {
+                "type":"char",
+                "val":" "
+            }
+        ]
+    }
+    
+]
